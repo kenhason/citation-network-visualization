@@ -4,14 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { GraphDisplayComponent } from './graph-display/graph-display.component';
 import { DatabaseService } from './database.service';
 import { ForceDirectedGraphExampleComponent } from './force-directed-graph-example/force-directed-graph-example.component';
+import {StylingService} from "./styling.service";
 
 @NgModule({
   declarations: [
     AppComponent,
-    GraphDisplayComponent,
     ForceDirectedGraphExampleComponent
   ],
   imports: [
@@ -20,7 +19,8 @@ import { ForceDirectedGraphExampleComponent } from './force-directed-graph-examp
     HttpModule
   ],
   providers: [
-    DatabaseService
+    DatabaseService,
+    StylingService
   ],
   bootstrap: [AppComponent]
 })
